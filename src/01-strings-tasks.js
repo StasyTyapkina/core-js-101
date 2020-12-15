@@ -66,8 +66,8 @@ function getStringFromTemplate(firstName, lastName) {
  *   'Hello, Chuck Norris!' => 'Chuck Norris'
  */
 function extractNameFromTemplate(value) {
-  let a = value.replace('Hello, ', '')
-  return a.replace('!', '')
+  const a = value.replace('Hello, ', '');
+  return a.replace('!', '');
 }
 
 
@@ -143,7 +143,7 @@ function removeFirstOccurrences(str, value) {
  *   '<a>' => 'a'
  */
 function unbracketTag(str) {
-  return str.slice(1, str.length - 1)
+  return str.slice(1, str.length - 1);
 }
 
 
@@ -158,7 +158,7 @@ function unbracketTag(str) {
  *  'abcdefghijklmnopqrstuvwxyz' => 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
  */
 function convertToUpperCase(str) {
-  return str.toUpperCase()
+  return str.toUpperCase();
 }
 
 /**
@@ -177,7 +177,7 @@ function convertToUpperCase(str) {
  *   'info@gmail.com' => ['info@gmail.com']
  */
 function extractEmails(str) {
-  return str.split(';')
+  return str.split(';');
 }
 
 /**
@@ -204,10 +204,10 @@ function extractEmails(str) {
  *
  */
 function getRectangleString(width, height) {
-   let a = '┌' + '─'.repeat(width - 2) + '┐\n';
-   let b = '│' + ' '.repeat(width - 2) + '│\n';
-   let c = '└' + '─'.repeat(width - 2) + '┘\n';
-   return a + b.repeat(height - 2) + c;
+  const a = `┌${'─'.repeat(width - 2)}┐\n`;
+  const b = `│${' '.repeat(width - 2)}│\n`;
+  const c = `└${'─'.repeat(width - 2)}┘\n`;
+  return a + b.repeat(height - 2) + c;
 }
 
 
@@ -227,7 +227,7 @@ function getRectangleString(width, height) {
  *    => 'NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm'
  *
  */
-function encodeToRot13(/*str*/) {
+function encodeToRot13(/* str */) {
   throw new Error('Not implemented');
 }
 
@@ -245,12 +245,12 @@ function encodeToRot13(/*str*/) {
  *   isString(new String('test')) => true
  */
 function isString(value) {
-  if (typeof(value) === "string") {
-    return true
-  } 
-  return false
+  if (typeof (value) === 'string') {
+    return true;
+  }
+  return false;
 }
-  
+
 
 /**
  * Returns playid card id.
